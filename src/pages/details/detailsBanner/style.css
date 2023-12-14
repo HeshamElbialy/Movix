@@ -1,0 +1,369 @@
+@import "../../../mixins.css";
+
+.detailsBanner {
+  width: 100%;
+  background-color: var(--black);
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+
+.detailsBanner .backdrop-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.detailsBanner .backdrop-img .lazy-load-image-background {
+  width: 100%;
+  height: 100%;
+}
+
+.detailsBanner .backdrop-img .lazy-load-image-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.detailsBanner .opacity-layer {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.detailsBanner .content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-flow:column;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .detailsBanner .content {
+    gap: 50px;
+    flex-direction: row;
+  }
+}
+
+.detailsBanner .left {
+  flex-shrink: 0;
+}
+
+.detailsBanner .left .posterImg {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .detailsBanner .left .posterImg {
+    max-width: 350px;
+  }
+}
+
+.detailsBanner .right {
+  color: white;
+}
+
+.detailsBanner .right .title {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+@media (min-width: 768px) {
+  .detailsBanner .right .title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+.right {
+  color: white;
+}
+
+.right .title {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+@media (min-width: 768px) {
+  .right .title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+.right .subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .right .subtitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.right .genres {
+  margin-bottom: 25px;
+  flex-flow: row wrap;
+}
+
+.right .genres {
+  justify-content: flex-start;
+}
+
+.right .overview {
+  margin-bottom: 25px;
+}
+
+.right .overview .heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right .overview .description {
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .right .overview .description {
+    padding-right: 100px;
+  }
+}
+
+.right .circleRating {
+  max-width: 70px;
+  background-color: var(--black2);
+}
+
+@media (min-width: 768px) {
+  .right .circleRating {
+    max-width: 90px;
+  }
+}
+
+.right {
+  color: white;
+}
+
+.right .title {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+@media (min-width: 768px) {
+  .right .title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+.right .subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .right .subtitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.right .genres {
+  margin-bottom: 25px;
+  flex-flow: row wrap;
+}
+
+.right .overview {
+  margin-bottom: 25px;
+}
+
+.right .overview .heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right .overview .description {
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .right .overview .description {
+    padding-right: 100px;
+  }
+}
+
+.detailsBanner .right .circleRating {
+  position: relative;
+  top: 0;
+  width: 100%;
+  max-width: 80px;
+  background-color: var(--black2);
+}
+
+@media (min-width: 768px) {
+  .right .circleRating {
+    max-width: 90px;
+  }
+}
+
+.right .circleRating .CircularProgressbar-text {
+  fill: white;
+}
+
+.right .playbtn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.right .playbtn svg {
+  width: 60px;
+}
+
+@media (min-width: 768px) {
+  .right .playbtn svg {
+    width: 80px;
+  }
+}
+
+.right .playbtn .text {
+  font-size: 20px;
+  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+}
+
+.triangle {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: white;
+  transform: translateY(0);
+  transition: all 0.7s ease-in-out;
+}
+
+.circle {
+  stroke: white;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 1300;
+  transition: all 0.5s ease-in-out;
+}
+
+.videoItem:hover .text {
+  color: var(--pink);
+}
+
+.videoItem:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: var(--pink);
+  animation: trailorPlay 0.7s ease-in-out;
+}
+
+.videoItem:hover .circle {
+  stroke-dashoffset: 0;
+  stroke: var(--pink);
+}
+
+.row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.info {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+  display: flex;
+}
+
+.info .infoItem {
+  margin-right: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.info .text {
+  margin-right: 10px;
+  opacity: 0.5;
+  line-height: 24px;
+}
+
+.info .text.bold {
+  font-weight: 600;
+  opacity: 1;
+}
+
+.detailsBannerSkeleton {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .detailsBannerSkeleton {
+    gap: 50px;
+    flex-direction: row;
+  }
+}
+
+.detailsBannerSkeleton .contentWrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.detailsBannerSkeleton .left {
+  flex-shrink: 0;
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  aspect-ratio: 1/1.5;
+}
+
+@media (min-width: 768px) {
+  .detailsBannerSkeleton .left {
+    max-width: 350px;
+  }
+}
+
+.detailsBannerSkeleton .right {
+  width: 100%;
+}
+
+.detailsBannerSkeleton .right .row {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.detailsBannerSkeleton .right .row:nth-child(2) {
+  width: 75%;
+  margin-bottom: 50px;
+}
+
+.detailsBannerSkeleton .right .row:nth-child(5) {
+  width: 50%;
+  margin-bottom: 50px;
+}
